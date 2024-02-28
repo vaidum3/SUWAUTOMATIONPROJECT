@@ -43,7 +43,7 @@ public class action extends BaseClass  {
 
 	}
 
-	public boolean findElement(WebDriver driver, WebElement ele) {
+	public static boolean findElement(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
 			ele.isDisplayed();
@@ -62,7 +62,7 @@ public class action extends BaseClass  {
 		return flag;
 	}
 
-	public boolean isDisplayed(WebDriver driver, WebElement ele) {
+	public static boolean isDisplayed(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		flag = findElement(driver, ele);
 		if (flag) {
@@ -117,7 +117,7 @@ public class action extends BaseClass  {
 	 * @param text
 	 * @return - true/false
 	 */
-	public boolean type(WebElement ele, String text) {
+	public static boolean type(WebElement ele, String text) {
 		boolean flag = false;
 		try {
 			flag = ele.isDisplayed();

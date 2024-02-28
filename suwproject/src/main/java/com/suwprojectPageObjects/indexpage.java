@@ -11,10 +11,10 @@ public class indexpage extends BaseClass{
 	
 	
 		
-		@FindBy(xpath="//a[@class=\"nav-link login\"]")
+		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[8]/a")
 		WebElement SignInbutton;
 		
-		@FindBy(xpath="//a[@class=\"nav-link sign-up\"]")
+		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[9]/a")
 		WebElement SignUpbutton;
 		
 		@FindBy(xpath="/html/body/nav/div[2]/div/div[1]/a/img")
@@ -45,6 +45,7 @@ public class indexpage extends BaseClass{
 		public indexpage() {
 			PageFactory.initElements(driver, this);
 			}
+		//methods 
 		
 		public LoginPage clickOnSignIn() throws Throwable {
 			 action.click(driver, SignInbutton);
@@ -56,7 +57,12 @@ public class indexpage extends BaseClass{
 			 action.click(driver, SignUpbutton);
 			return  new SignUpPage();
 		}
-		
+		//validate startupwind loago 
+		public boolean validateLogo()  {
+			return action.isDisplayed(driver,StartupWindLogo);
 		}
-
-
+		public String getMyStoreTitle() {
+			String startupwindTitle=driver.getTitle();
+			return startupwindTitle;
+		}
+		}
