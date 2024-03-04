@@ -1,5 +1,6 @@
 package com.suwprojectPageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -50,19 +51,18 @@ public class indexpage extends BaseClass{
 		public LoginPage clickOnSignIn() throws Throwable {
 			 action.click(driver, SignInbutton);
 			return  new LoginPage();
-			 
-			
+			 	
 		}
-		public  SignUpPage clickOnSignup() throws Throwable {
-			 action.click(driver, SignUpbutton);
-			return  new SignUpPage();
-		}
+}
+		/*
 		//validate startupwind loago 
-		public boolean validateLogo()  {
-			return action.isDisplayed(driver,StartupWindLogo);
+		   public boolean validateLogo() {
+		        WebElement logoElement = driver.findElement(By.id("logo")); // Assuming "logo" is the ID of the logo element
+		        return logoElement.isDisplayed() && logoElement.isEnabled();
+		    }
+		//public String getStartupwindTitle() {
+			//String startupwindTitle=driver.getTitle();
+			//return startupwindTitle;
 		}
-		public String getMyStoreTitle() {
-			String startupwindTitle=driver.getTitle();
-			return startupwindTitle;
-		}
-		}
+		*/
+		

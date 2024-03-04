@@ -13,12 +13,16 @@ import com.suwproject.Base.BaseClass;
 
 public class SignUpPage extends BaseClass {
 	
+	
 	private static final int Entrepreneur = 0;
 	
 	private static final int Mentor = 0;
 
 	private static final int Investor = 0;
-
+	
+	@FindBy(xpath="//span[text()=\"New User\"]")
+	WebElement  newuser;
+	
 	@FindBy(id="Firstname")
 	WebElement firstname;
 	
@@ -46,6 +50,10 @@ public class SignUpPage extends BaseClass {
 	public  SignUpPage () {
 		PageFactory.initElements(driver, this);
 		}
+	public boolean validateSignUpPage() throws Throwable {
+		return action.isDisplayed(driver,newuser);
+	}
+	
 	//write methods 
 	 public void selectSchool(String schoolValue) {
 	        Select dropdown = new Select(schoolNameDropdown);
