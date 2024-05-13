@@ -22,8 +22,20 @@ public class indexpagetest extends BaseClass {
 	
 	@AfterMethod
 	public void TearDown() {
-		
+		System.out.println("app launch successfully");
 		driver.quit();
+	}
+	@Test
+	public void verifyimage() {
+		 indexpage=new indexpage();//create objects of methods in object pages
+		boolean result =indexpage.validateimage();//call menthod using object 
+		 
+		//verify if status is true
+	      if (result) {
+	         System.out.println("Logoimg present");
+	      } else {
+	         System.out.println("Logoimg not present");
+	      }
 	}
 	
     /*@Test

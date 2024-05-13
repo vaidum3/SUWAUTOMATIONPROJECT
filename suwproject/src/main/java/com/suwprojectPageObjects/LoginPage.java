@@ -8,7 +8,8 @@ import com.suwproject.ActionDriver.action;
 import com.suwproject.Base.BaseClass;
 
 public class LoginPage extends BaseClass {
-
+	
+	
 	@FindBy(id="Email")
 	WebElement username;
 	

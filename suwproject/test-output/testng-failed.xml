@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.suwprojectTestCases.indexpagetest">
+      <class name="com.suwprojectTestCases.loginpagetest">
         <methods>
-          <include name="TearDown"/>
-          <include name="setup"/>
-          <include name="loadConfig"/>
-          <include name="VerifyLogo"/>
+          <include name="tearDown"/>
+          <include name="loginTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.suwprojectTestCases.indexpagetest -->
+      </class> <!-- com.suwprojectTestCases.loginpagetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

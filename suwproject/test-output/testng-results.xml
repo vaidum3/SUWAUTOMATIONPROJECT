@@ -2,28 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-04T18:10:37 IST" name="Default suite" finished-at="2024-03-04T18:10:43 IST" duration-ms="5915">
+  <suite started-at="2024-05-13T12:21:18 IST" name="Default suite" finished-at="2024-05-13T12:21:37 IST" duration-ms="19498">
     <groups>
     </groups>
-    <test started-at="2024-03-04T18:10:37 IST" name="Default test" finished-at="2024-03-04T18:10:43 IST" duration-ms="5915">
-      <class name="com.suwprojectTestCases.indexpagetest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.suwprojectTestCases.indexpagetest@74e28667]" started-at="2024-03-04T18:10:37 IST" name="loadConfig" finished-at="2024-03-04T18:10:37 IST" duration-ms="23" status="PASS">
+    <test started-at="2024-05-13T12:21:18 IST" name="Default test" finished-at="2024-05-13T12:21:37 IST" duration-ms="19498">
+      <class name="com.suwprojectTestCases.loginpagetest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.suwprojectTestCases.loginpagetest@48075da3]" started-at="2024-05-13T12:21:18 IST" name="setUp" finished-at="2024-05-13T12:21:22 IST" duration-ms="4445" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.suwprojectTestCases.indexpagetest@74e28667]" started-at="2024-03-04T18:10:37 IST" name="setup" finished-at="2024-03-04T18:10:42 IST" duration-ms="4687" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:0, instance:com.suwprojectTestCases.loginpagetest@48075da3]" started-at="2024-05-13T12:21:22 IST" name="loginTest" description="Valid Credentials" finished-at="2024-05-13T12:21:36 IST" duration-ms="13440" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="VerifyUrl()[pri:0, instance:com.suwprojectTestCases.indexpagetest@74e28667]" started-at="2024-03-04T18:10:42 IST" name="VerifyUrl" finished-at="2024-03-04T18:10:42 IST" duration-ms="11" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.suwprojectTestCases.loginpagetest@48075da3]" started-at="2024-05-13T12:21:36 IST" name="tearDown" finished-at="2024-05-13T12:21:37 IST" duration-ms="1553" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyUrl -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.suwprojectTestCases.indexpagetest@74e28667]" started-at="2024-03-04T18:10:42 IST" name="TearDown" finished-at="2024-03-04T18:10:43 IST" duration-ms="1124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- com.suwprojectTestCases.indexpagetest -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.suwprojectTestCases.loginpagetest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

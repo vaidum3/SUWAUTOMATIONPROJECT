@@ -12,35 +12,36 @@ public class indexpage extends BaseClass{
 	
 	
 		
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[8]/a")
-		WebElement SignInbutton;
+		@FindBy(xpath="//*[@class=\"text-info f-15 font-weight-bold nav-link\" and @href=\"/login\"]")
 		
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[9]/a")
-		WebElement SignUpbutton;
+		WebElement Loginbutton;
+		
+		@FindBy(xpath="//*[@id=\"basic-navbar-nav\"]/div/a[7]")
+		WebElement GetStartedbutton;
 		
 		@FindBy(xpath="/html/body/nav/div[2]/div/div[1]/a/img")
 		WebElement StartupWindLogo;
 		
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[1]/a")
+		@FindBy(xpath="//*[@id=\"basic-nav\" and @href=\"https://www.startupwind.com\"]")
 		WebElement HomeTab;
 
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[2]/a")
-		WebElement StartupsAndSMBs;
+		@FindBy(xpath="//*[@id=\"basic-nav\" and @href=\"https://startupwind.com/smb.html\"]")
+		WebElement SmallBusinesses;
 		
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[3]/a")
+		@FindBy(xpath="//*[@id=\"basic-nav\" and @href=\"https://startupwind.com/universities.html\"]")
 		WebElement Universities;
 		
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[4]/a")
+		@FindBy(xpath="//*[@id=\"basic-nav\" and @href=\"https://www.startupwind.com/states.html\"]")
 		WebElement States;
 		
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[5]/div/button")
+		@FindBy(xpath="/html/body/div/div[1]/div/div/nav/div/div/div[1]/a")
 		WebElement ResourcesDropdown;
 		
 		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[6]/a")
 		WebElement Courses;
 		
 		
-		@FindBy(xpath="/html/body/nav/div[2]/div/div[3]/div/ul/li[7]/div/button")
+		@FindBy(xpath="tml/body/div/div[1]/div/div/nav/div/div/div[1]/a")
 		WebElement CompanyDropDown;
 		
 		public indexpage() {
@@ -49,20 +50,31 @@ public class indexpage extends BaseClass{
 		//methods 
 		
 		public LoginPage clickOnSignIn() throws Throwable {
-			 action.click(driver, SignInbutton);
+			 try {
+				action.click(driver,  Loginbutton);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			return  new LoginPage();
 			 	
 		}
-}
-		/*
-		//validate startupwind loago 
-		   public boolean validateLogo() {
-		        WebElement logoElement = driver.findElement(By.id("logo")); // Assuming "logo" is the ID of the logo element
-		        return logoElement.isDisplayed() && logoElement.isEnabled();
-		    }
+			
 		//public String getStartupwindTitle() {
 			//String startupwindTitle=driver.getTitle();
 			//return startupwindTitle;
+
+		  public boolean validateimage() {
+		        try {
+		            WebElement logoImage = driver.findElement(By.xpath("/html/body/nav/div[2]/div/div[1]/a/img"));
+		            return logoImage.isDisplayed();
+		        } catch (org.openqa.selenium.NoSuchElementException e) {
+		            return false; // Element not found
+		        }
+		    }
+
+			
 		}
-		*/
+		
+	
 		

@@ -6,6 +6,8 @@ package com.suwprojectPageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import com.suwproject.ActionDriver.action;
 import com.suwproject.Base.BaseClass;
 
@@ -32,4 +34,16 @@ public class Homepage extends BaseClass  {
 		action.click(driver, crossbutton);
 		return new Homepage();
 	}
+	
+	public String  getcurrenturl()
+	{
+	String homepageurl=driver.getCurrentUrl();
+	return homepageurl();
+		
 	}
+	private String homepageurl() {
+		// TODO Auto-generated method stub
+		return homepageurl();
+	}
+	
+}
